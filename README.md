@@ -22,7 +22,7 @@ AzureADRealm {<br>
 };<br>
 
 3. GlassFish/Payara Configuration for new Realm<br>
-In order to use this "AzureAD-Custom-Realm", you need to configure the Security Realm on GlassFish/Payara as follows.
+In order to use this "AzureAD-Custom-Realm", you need to configure the Security Realm on GlassFish/Payara as follows.<br>
  asadmin create-auth-realm --classname com.yoshio3.azureRealm.AzureADRealm --property="jaas-context=AzureADRealm" AzureADRealm
 
 4. Restart GlassFish/Payara
