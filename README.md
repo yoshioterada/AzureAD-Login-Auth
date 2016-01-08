@@ -12,16 +12,16 @@ authorization.
 Thus, I decided to use the Graph API in next version.
 
 <HR>
-1. Build and copy the custom realm to GlassFish/Payara domain lib directory like follows.
+1. Build and copy the custom realm to GlassFish/Payara domain lib directory like follows.<br>
 cp AzureAD-Custom-Realm.jar $GLASSFISH_INSTALL/glassfish-4.1.1/glassfish/domains/domain1/lib
 
-2. GlassFish/Payara Configuration for Login
+2. GlassFish/Payara Configuration for Login<br>
 /Applications/NetBeans/glassfish-4.1.1/glassfish/domains/domain1/config/login.conf<br>
 AzureADRealm {<br>
         com.yoshio3.azureRealm.AzureADLoginModule required;<br>
 };<br>
 
-3. GlassFish/Payara Configuration for new Realm
+3. GlassFish/Payara Configuration for new Realm<br>
 In order to use this "AzureAD-Custom-Realm", you need to configure the Security Realm on GlassFish/Payara as follows.
  asadmin create-auth-realm --classname com.yoshio3.azureRealm.AzureADRealm --property="jaas-context=AzureADRealm" AzureADRealm
 
@@ -29,7 +29,7 @@ In order to use this "AzureAD-Custom-Realm", you need to configure the Security 
 
 5. Build and Deploy "AzureAD-Login-WebApp" to GlassFish/Payara
 
-6. Configure the Active Directory on Microsoft Azure
+6. Configure the Active Directory on Microsoft Azure<br>
    Note: Please register the application as "Native Client Application"?
    After register it, please get the client ID from Azure Portal and 
    copy & paste to the following code of AzureAD-Custom-Realm project.
