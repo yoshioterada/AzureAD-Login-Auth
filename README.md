@@ -16,14 +16,14 @@ Thus, I decided to use the Graph API in next version.
 cp AzureAD-Custom-Realm.jar $GLASSFISH_INSTALL/glassfish-4.1.1/glassfish/domains/domain1/lib
 
 2. GlassFish/Payara Configuration for Login
-/Applications/NetBeans/glassfish-4.1.1/glassfish/domains/domain1/config/login.conf
-AzureADRealm {
-        com.yoshio3.azureRealm.AzureADLoginModule required;
-};
+/Applications/NetBeans/glassfish-4.1.1/glassfish/domains/domain1/config/login.conf<br>
+AzureADRealm {<br>
+        com.yoshio3.azureRealm.AzureADLoginModule required;<br>
+};<br>
 
 3. GlassFish/Payara Configuration for new Realm
 In order to use this "AzureAD-Custom-Realm", you need to configure the Security Realm on GlassFish/Payara as follows.
-# asadmin create-auth-realm --classname com.yoshio3.azureRealm.AzureADRealm --property="jaas-context=AzureADRealm" AzureADRealm
+ asadmin create-auth-realm --classname com.yoshio3.azureRealm.AzureADRealm --property="jaas-context=AzureADRealm" AzureADRealm
 
 4. Restart GlassFish/Payara
 
@@ -34,9 +34,9 @@ In order to use this "AzureAD-Custom-Realm", you need to configure the Security 
    After register it, please get the client ID from Azure Portal and 
    copy & paste to the following code of AzureAD-Custom-Realm project.
    
-public class AzureADRealm extends AppservRealm {
-    private final static String CLIENT_ID = "********-****-****-****-************";
-}
+public class AzureADRealm extends AppservRealm {<br>
+    private final static String CLIENT_ID = "********-****-****-****-************";<br>
+}<br>
 
 If you create the user on Active Directory on Microsoft Azure, you can login to the GlassFish/Payara
 and screen will transfer to the welcomePrimefaces.xhtml.
