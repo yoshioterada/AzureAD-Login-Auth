@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pr="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <pr:layout fullPage="true">
+
+                <pr:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    Header
+                </pr:layoutUnit>
+
+                <pr:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </pr:layoutUnit>
+
+                <pr:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <pr:menu>
+                        <pr:submenu label="Resources">
+                            <pr:menuitem value="Demo" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
+                            <pr:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
+                            <pr:menuitem value="Forum" url="http://forum.primefaces.org/" />
+                            <pr:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
+
+                        </pr:submenu>
+
+                    </pr:menu>
+                </pr:layoutUnit>
+
+                <pr:layoutUnit position="center">
+                    Welcome to PrimeFaces
+                </pr:layoutUnit>
+
+            </pr:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+
