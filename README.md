@@ -2,8 +2,7 @@ This is first commit of GlassFish custom realm for Microsoft Azure
 Active Directory.
 
 At first, I had tried to use the ADAL4J in this first commit.
-https://github.com/AzureAD/azure-activedirectory-library-for-java/tree/m
-aster/src/main/java/com/microsoft/aad/adal4j
+https://github.com/AzureAD/azure-activedirectory-library-for-java
 
 However I noticed that there was few functionality on it. And I
 couldn’t get the group information from libraries.
